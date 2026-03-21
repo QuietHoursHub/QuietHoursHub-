@@ -1,6 +1,9 @@
 let time = 1500;
 let timer = null;
-let streak = 0;
+
+/* LOAD SAVED STREAK */
+let streak = localStorage.getItem("streak") || 0;
+document.getElementById("streak").innerText = streak + " days";
 
 function updateDisplay() {
   let minutes = Math.floor(time / 60);
@@ -32,6 +35,7 @@ function resetTimer() {
   updateDisplay();
 }
 
+/* TASK */
 function addTask() {
   let input = document.getElementById("taskInput");
 
@@ -44,9 +48,21 @@ function addTask() {
   input.value = "";
 }
 
+/* STREAK FIXED */
 function increaseStreak() {
   streak++;
-  document.getElementById("streak").innerText = streak;
+  localStorage.setItem("streak", streak);
+  document.getElementById("streak").innerText = streak + " days";
+}
+
+/* FEEDBACK */
+function submitFeedback() {
+  let feedback = document.getElementById("feedbackInput").value;
+
+  if (feedback.trim() === "") return;
+
+  document.getElementById("feedbackMsg").innerText = "✅ Feedback submitted!";
+  document.getElementById("feedbackInput").value = "";
 }
 
 updateDisplay();
