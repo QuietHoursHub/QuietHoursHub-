@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuietHoursHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="overlay">
+
+    <h1 class="title">QuietHoursHub</h1>
+    <p class="subtitle">Focus. Build. Repeat.</p>
+
+    <!-- Timer -->
+    <div class="card">
+      <div id="time">25:00</div>
+
+      <div class="buttons">
+        <button onclick="startTimer()">Start</button>
+        <button onclick="resetTimer()">Reset</button>
+      </div>
+    </div>
+
+    <!-- Tasks -->
+    <div class="card">
+      <input type="text" id="taskInput" placeholder="Add a task...">
+      <button onclick="addTask()">Add</button>
+      <ul id="taskList"></ul>
+    </div>
+
+    <!-- Streak -->
+    <div class="card streak">
+      🔥 Streak: <span id="streak">0</span>
+    </div>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
