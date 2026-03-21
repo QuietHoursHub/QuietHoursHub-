@@ -7,34 +7,45 @@
 </head>
 <body>
 
-  <div class="overlay">
+<div class="overlay">
 
-    <h1 class="title">QuietHoursHub</h1>
-    <p class="subtitle">Focus. Build. Repeat.</p>
+  <h1 class="title">QuietHoursHub</h1>
 
-    <!-- Timer -->
+  <div class="grid">
+
+    <!-- TIMER -->
     <div class="card">
+      <h2>⏱️ Focus Timer</h2>
       <div id="time">25:00</div>
-
-      <div class="buttons">
-        <button onclick="startTimer()">Start</button>
-        <button onclick="resetTimer()">Reset</button>
-      </div>
+      <button onclick="startTimer()">Start</button>
+      <button onclick="resetTimer()">Reset</button>
     </div>
 
-    <!-- Tasks -->
+    <!-- TASK TRACKER -->
     <div class="card">
-      <input type="text" id="taskInput" placeholder="Add a task...">
+      <h2>✅ Tasks</h2>
+      <input type="text" id="taskInput" placeholder="Add task...">
       <button onclick="addTask()">Add</button>
       <ul id="taskList"></ul>
     </div>
 
-    <!-- Streak -->
-    <div class="card streak">
-      🔥 Streak: <span id="streak">0</span>
+    <!-- STREAK -->
+    <div class="card">
+      <h2>🔥 Streak</h2>
+      <p id="streak">0 days</p>
+    </div>
+
+    <!-- FEEDBACK -->
+    <div class="card">
+      <h2>💬 Feedback</h2>
+      <textarea id="feedbackInput" placeholder="Write your feedback..."></textarea>
+      <button onclick="submitFeedback()">Submit</button>
+      <p id="feedbackMsg"></p>
     </div>
 
   </div>
+
+</div>
 
 <script src="script.js"></script>
 </body>
