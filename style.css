@@ -1,74 +1,64 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308') no-repeat center center/cover;
+  background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308') no-repeat center/cover;
   color: white;
 }
 
-/* Dark overlay */
 .overlay {
-  background: rgba(0,0,0,0.6);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background: rgba(0,0,0,0.7);
+  min-height: 100vh;
+  padding: 30px;
+  text-align: center;
 }
 
-/* Title */
 .title {
-  font-size: 60px;
+  font-size: 50px;
   color: gold;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.subtitle {
-  margin-bottom: 30px;
-  opacity: 0.8;
+/* GRID LAYOUT */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
-/* Glass card */
+/* CARD */
 .card {
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
   padding: 20px;
-  margin: 10px;
   border-radius: 20px;
-  width: 300px;
-  text-align: center;
 }
 
-/* Timer */
+/* TIMER */
 #time {
-  font-size: 60px;
-  margin-bottom: 10px;
+  font-size: 50px;
+  margin: 10px 0;
 }
 
-/* Buttons */
-button {
-  padding: 10px 20px;
-  margin: 5px;
-  border: none;
-  background: gold;
-  color: black;
-  font-weight: bold;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-/* Input */
-input {
+/* INPUTS */
+input, textarea {
+  width: 80%;
   padding: 10px;
   border-radius: 10px;
   border: none;
-  width: 70%;
+  margin: 10px 0;
+}
+
+/* BUTTON */
+button {
+  padding: 10px 15px;
+  border: none;
+  background: gold;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 ul {
   list-style: none;
   padding: 0;
-}
-
-.streak {
-  font-size: 20px;
 }
